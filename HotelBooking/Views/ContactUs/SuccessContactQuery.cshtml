@@ -1,0 +1,30 @@
+﻿< !DOCTYPE html >
+<html lang="en">
+<head>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Booking</title>
+  
+  
+</head>
+<body>
+    @{
+        ViewBag.Title = "Success ContactU";
+        Layout = "~/Shared/HeaderFooter.cshtml";
+    }
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <br><br> <h2 style="color:#0fad00">Success</h2>
+                <p style="font-size:20px;color:#5C5C5C;">
+                    Thank you for raising the request. Your request Id : @ViewBag.RequestId <br />
+                    Your request will be processed with in 24 hours
+                </p>
+
+                <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

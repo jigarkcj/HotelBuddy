@@ -1,0 +1,61 @@
+﻿@* Layout page used to render master page content to this page *@
+@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+@{
+    var message = TempData["InvalidCredentials"];
+    // @Html.Raw(TempData["InvalidCredentials"]);
+}
+
+<html>
+
+<body>
+    <br /><br />
+    @* Simple bootstrap design is used for the Log in page 
+       Default bootstrap validation has been used. 
+        *@
+    <div class="container">
+
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Log In to Your Account</h4><br/>
+               @if (message != null)
+               {
+                <div class="card-title text-center" style="color:red;"> Invaild credentials. Please try again.</div>
+               }
+                
+                <form action="~/Login/Login" method="post">
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="email_id" class="form-control" placeholder="Email address" type="email" required="required">
+                    </div> <!-- form-group// -->
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" name="password" placeholder="Enter password" type="password" required="required">
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" value="Login"> Login </button>
+                    </div> <!-- form-group// -->
+
+                    <p class="text-center">First time user? <a href="~/Registration/GetRegistrationDetails">Sign Up</a> </p>
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br />
+    <!--container end.//-->
+   
+</body>
+
+</html>
+<style type="text/css">
+    .text-center {
+        margin-bottom: 0px !important;
+    }
+</style>

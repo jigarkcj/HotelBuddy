@@ -1,0 +1,25 @@
+﻿@using HotelBooking.Models;
+@model PaymentChargeDetails
+@{
+    ViewBag.Title = "PaymentFailure";
+    Layout = "~/Shared/NoHeaderFooter.cshtml";
+}
+<body>
+    <div class="container mb-4" style="padding-top: 80px;">
+        <div class="card">
+            <div class="card-body">
+                <!-- Failure message -->
+                <div class="failure-div">
+                    <div class="failure-message">
+                        <h4><i class="fas fa-times-circle"></i> Payment <span id="status">Unsuccessful</span></h4>
+                    </div>
+                    <!-- getting the reason for error from the model -->
+                    <p><span class="error-reason">@Model.message</span> Please try again</p>
+                    <p> <span class="red">Please do not referesh the page</span>,if the page does not redirect in 5s <a href="/Booking/HotelPayment"> click here </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/scripts/jss/redirect.js"></script>
+</body>
+

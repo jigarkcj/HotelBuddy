@@ -1,0 +1,82 @@
+﻿@model HotelBooking.Models.UserBookingDetails
+@{
+    ViewBag.Title = "CancelBooking";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+@{
+
+    string imreBase64Data = Convert.ToBase64String(@Model.HotelImage);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+    <body>
+        <div class="container mb-4" style="padding-top: 80px;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="booking-cancellation-message">
+                        <h4><i class="fas fa-times-circle"></i> Your booking is cancelled</h4>
+                    </div>
+                    <!-- Booking ID -->
+                    <div class="row" style="text-align:center;justify-content:center;">
+                        <b> BookingID&nbsp;:&nbsp;</b>@Model.bookingID
+                    </div>
+                    <div class="row ml-3">
+                        <div class="booking-details">
+                            <p><b>Booking Details :</b></p>
+                        </div>
+                    </div>
+                    <!-- Booking details -->
+                    <div class="row ml-3">
+                        <div class="col-lg-2 mr-3">
+                            <img src=@imgSrc alt="hotel image" class="rounded hotel-image">
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                @Model.HotelName
+                            </div>
+                            <div class="row">
+                                @for (var i = 1; i <= Int32.Parse(Model.hotelRating); ++i)
+                                {
+                                    <span class="fas fa-star" title="User Rating"></span>
+                                }
+                                @for (var i = 1; i <= (5 - Int32.Parse(Model.hotelRating)); ++i)
+                                {
+                                    <span class="far fa-star" title="User Rating"></span>
+                                }
+                            </div>
+                            <div class="row">
+                                Check-in: @Model.checkIn.ToString("yyyy-MM-dd") / Check-Out: @Model.checkOut.ToString("yyyy-MM-dd")
+                            </div>
+                            <div class="row">
+                                <small>
+                                    <span id="number-of-rooms">@Model.rooms&nbsp;Room</span>,<span id="adultCount-description">@Model.adults&nbsp;Adult</span>@if (Model.child > 0)
+                                    {<span id="childCount-description">,@Model.child&nbsp;Child</span>}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ml-3 mb-2 mt-2">
+                        <div class="col-sm-3 guest-name">
+                            <p><b>Name:</b> @Model.userName</p>
+                        </div>
+                        <div class="col-sm-3 guest-mail">
+                            <p><b>Mail:</b> @Model.mail</p>
+                        </div>
+                        <div class="col-sm-3 guest-mobile">
+                            <p><b>Mobile:</b> @Model.mobile</p>
+                        </div>
+                    </div>
+                    <div class="row ml-3 mb-3">
+                        <p> Your Refund amount <span style="color:blue;">$@Model.amount</span> has been initiated by us, it will take 4-5 business days to reflect into your bank account that was used to book</p>
+                    </div>
+                    <form action="BookingDetailsList">
+                        <div class="row mt-3" style="text-align:center;justify-content:center;">
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary" style="width:200px;">Go to Bookings</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+}

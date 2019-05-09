@@ -1,0 +1,39 @@
+﻿@model List<HotelBooking.Models.HotelDetails>
+@{int TrendingHotelsCount = 0; }
+@foreach (var TrendingHotel in Model)
+{
+
+
+    string imreBase64Data = Convert.ToBase64String(@TrendingHotel.HotelImage);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+
+    <!--Trending Hotels section-->
+    <div class="card shadow_effect box_border" style="width: 300px;">
+        <img class="card-img-top image_border" src="@imgSrc" alt="Card image cap" width="200" height="200">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">
+                <a href="@Url.Action("HotelDescription", "HotelDescription", new { HotelID=@TrendingHotel.HotelID})">@TrendingHotel.HotelName</a>
+            </h5>
+            <p class="card-text" style="height:25%">@TrendingHotel.HotelDescription</p>
+            <p class="card-text">
+                <b>Facilities:</b> @TrendingHotel.HotelFacilities
+            </p>
+            <p class="card-text">
+            @for (var i = 1; i <= Int32.Parse(TrendingHotel.HotelRating); ++i)
+                {
+                <span class="fas fa-star" title="User Rating"></span>
+            }
+            @for (var i = 1; i <= (5 - Int32.Parse(TrendingHotel.HotelRating)); ++i)
+                {
+                <span class="far fa-star" title="User Rating"></span>
+            }
+            </p>
+            <p class="card-text"><b>Price:  $@TrendingHotel.HotelPrice</b> per night </p>
+            <button href="#" class="btn btn-primary float-left shadow_effect">WishList</button>
+            <a class="btn btn-primary BookNow" href="@Url.Action("HotelDescription", "HotelDescription", new { HotelID=@TrendingHotel.HotelID})"
+               style="float:right; color:white">View more</a>
+        </div>
+    </div>
+
+    if (++TrendingHotelsCount == 4) { break; }
+}

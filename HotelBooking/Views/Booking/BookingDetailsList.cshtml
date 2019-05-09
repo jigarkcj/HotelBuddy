@@ -1,0 +1,113 @@
+﻿@model List<HotelBooking.Models.UserBookingDetails>
+@using System.Collections.Specialized;
+@{
+    ViewBag.Title = "BookingDetailsList";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+<body>
+    <div class="container mb-4" style="padding-top: 80px;">
+        <div class="card">
+            <div class="row ml-3 mb-3 mr-3">
+                <div class="col-lg-12 booking-details-list">
+                    <!-- Checks if user has any booking or not -->
+                    @if (Model.Capacity > 0)
+                    {
+                        <table style="width:100%; text-align: center;">
+                            <tr>
+                                <th>Booking Details</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                            @foreach (var BookedDetails in Model)
+                            {
+                                string imreBase64Data = Convert.ToBase64String(@BookedDetails.HotelImage);
+                                var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-lg-3 booked-hotel-image">
+                                                <img src=@imgSrc alt="hotel image" class="rounded testing">
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="row">
+                                                    <b> BookingID&nbsp;:&nbsp;</b>@BookedDetails.bookingID
+                                                </div>
+                                                <div class="row">
+                                                    @BookedDetails.HotelName
+                                                </div>
+                                                <div class="row">
+                                                    @for (var i = 1; i <= Int32.Parse(BookedDetails.hotelRating); ++i)
+                                                    {
+                                                        <span class="fas fa-star" title="User Rating"></span>
+                                                    }
+                                                    @for (var i = 1; i <= (5 - Int32.Parse(BookedDetails.hotelRating)); ++i)
+                                                    {
+                                                        <span class="far fa-star" title="User Rating"></span>
+                                                    }
+                                                </div>
+                                                <div class="row">
+                                                    Check-in: @BookedDetails.checkIn.ToString("yyyy-MM-dd")
+                                                </div>
+                                                <div class="row">
+                                                    Check-Out: @BookedDetails.checkOut.ToString("yyyy-MM-dd")
+                                                </div>
+                                                <div class="row">
+                                                    <small>
+                                                        <span id="number-of-rooms">@BookedDetails.rooms&nbsp;Room</span>,<span id="adultCount-description">@BookedDetails.adults&nbsp;Adult</span>@if (BookedDetails.child > 0)
+                                                        {<span id="childCount-description">,@BookedDetails.child&nbsp;Child</span>}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>@BookedDetails.userName</td>
+                                    <td>$@BookedDetails.amount</td>
+                                    <td>
+                                        @{if (BookedDetails.bookingStatus == "Confirmed")
+                                            {<span id="booking-status-confirmed">Confirmed</span>}
+                                            else
+                                            {
+                                                {<span id="booking-status-cancelled">Cancelled</span>}
+                                            }
+                                        }
+                                    </td>
+                                    <!-- shows modify and cancel button on if the status is confirmed and checkIn date is 2 days after current date -->
+                                    @if (BookedDetails.bookingStatus == "Confirmed" && BookedDetails.checkIn.Ticks > DateTime.Now.AddDays(1).Ticks)
+                                    {
+                                        <td>
+                                            <form action="/Booking/ModifyBooking">
+                                                <input type="hidden" id="bookingID" name="bookingID" value="@BookedDetails.bookingID" />
+                                                <input type="submit" class="btn btn-block btn-primary" value="Modify" />
+                                            </form>
+                                            <br />
+                                            <button class="btn btn-block btn-danger" onclick="cancelBookingConfirmation('@BookedDetails.bookingID')">Cancel</button>
+                                        </td>
+                                    }
+                                </tr>
+                                            }
+                        </table>
+                                            }
+                                            else
+                                            {
+                                                <div style="margin-top:5px; text-align:center; color:blue;">
+                                                    <h4> You have no bookings</h4>
+                                                </div>
+                                            }
+                </div>
+            </div>
+            <div class="ml-3 mt-3">
+                <p><i>Note: Booking can be modified only <b>ONE</b> day before CheckIn</i></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //to ask for confirmation from the user
+        function cancelBookingConfirmation(bookingId) {
+            if (confirm("Do you want to cancel?")) {
+                window.location.href = '@Url.Action("CancelBooking", "Booking",new { bookingID="bookingId"})'.replace("bookingId", bookingId);
+            }
+        }
+    </script>
+</body>

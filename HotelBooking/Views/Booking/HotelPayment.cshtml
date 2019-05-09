@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "HotelPayment";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+<body>
+    <div class="container mb-4" style="padding-top: 80px;">
+        <div class="card">
+            <form action="Payment" method="post" id="payment-form">
+                <div class="card-body">
+                    <div class="payment-form">
+                        <!--shows accepted card for payment -->
+                        <div class="accepted-cards">
+                            <p> We Accept all major Debit and Credit cards <img src="~/images/payment/accepted-cards.jpg" alt=""></p>
+                        </div>
+                        <div class="type-of-card">
+                            <label class="radio-inline">
+                                <input type="radio" name="cardType" value="debit" checked>Debit Card
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="cardType" value="credit">Credit Card
+                            </label>
+                        </div>
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                        <!-- grey border with lock . -->
+                        <div class="card secured-border">
+                            <div class="secured-payment-message">
+                                <p>Secured card payment</p>
+                            </div>
+                            <div class="lock-icon">
+                                <img src="~/images/payment/lock.png" alt="">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fas fa-user"></i> </span>
+                                </div>
+                                <input id="nameOnCard" name="nameOnCard" type="text" class="form-control" placeholder="Name on the card" required>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="far fa-credit-card"></i></span>
+                                </div>
+                                <div id="card-number">
+                                    <!-- A Stripe Element will be inserted here by stripe.js. -->
+                                </div>
+                            </div>
+                            <div class="expiry-date">
+                                <p> Expiry Date*</p>
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div id="card-exp" style="width:40%;">
+                                            <!-- A Stripe Element will be inserted here by stripe.js. -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- security code(cvc) is displayed from this div. -->
+                            <div class="security-code-div">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="security-code-message">
+                                            <p> <b> Security Code* </b> <br></p>
+                                            <p style="font-size: 11px;">The last 3 digits on the back of your card </p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-5 select-month">
+                                                        <div id="card-cvv">
+                                                            <!-- A Stripe Element will be inserted here by stripe.js. -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <img src="~/images/payment/cvc.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-payment" style="margin-top: 10px;text-align:center;justify-content:center;">
+                            <!-- Amount to pay -->
+                            <h5> Total Payment :$@ViewBag.PaymentAmountToPay</h5>
+                            <div class="payment-button">
+                                <button class="btn btn-block btn-primary"><i class="fas fa-lock" style="padding: 5px;"></i>Pay Securely </button>
+                            </div>
+                            <div class="payment-cancel-button">
+                                <a href="/Home/HotelBookingView" class="btn btn-block btn-danger"> Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="~/scripts/jss/stripe.js"></script>
+</body>

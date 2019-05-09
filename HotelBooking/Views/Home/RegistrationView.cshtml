@@ -1,0 +1,68 @@
+﻿@* Layout page used to render master page content to this page *@
+@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+<html>
+<head>
+</head>
+<body>
+
+
+    <br /><br />
+    @* Simple bootstrap design is used for the Registration page
+    Default bootstrap validation has been used. *@
+    <div class="container">
+          <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                @* Link https://stackoverflow.com/questions/49943610/can-i-check-password-confirmation-in-bootstrap-4-with-default-validation-options *@
+                <form action="/newaccount" method=post
+      oninput='confirmPass.setCustomValidity(password.value != confirmPass.value ? "Passwords do not match." : "")'>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Full name" type="text" required="required">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Email address" type="email" required="required">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 120px;">
+                            <option selected="">+902</option>
+                            <option value="1">+912</option>
+                            <option value="2">+913</option>
+                            <option value="3">+914</option>
+                        </select>
+                        <input name="" class="form-control" placeholder="Phone number" type="text" pattern="^\d{4}-\d{3}-\d{4}$" >
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Create password" type="password" required="required" name="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Repeat password" type="password" required="required" name="confirmPass">
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="~/Home/LoginView">Log In</a> </p>
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div><br /><br /><br />
+    <!--container end.//-->
+   
+</body>
+</html>

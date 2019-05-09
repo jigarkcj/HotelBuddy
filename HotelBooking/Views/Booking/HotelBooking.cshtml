@@ -1,0 +1,195 @@
+﻿@model HotelBooking.Models.UserBookingDetails
+@{
+    ViewBag.Title = "HotelBooking";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+<!--  body-->
+@{
+
+    string imreBase64Data = Convert.ToBase64String(@Model.HotelImage);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+
+    <body onload="roomChange(@Model.rooms,@Model.HotelPrice);">
+        <div class="container mb-4" style="padding-top: 80px;">
+            <div class="card">
+                <div class="card-body">
+                    <form action="HotelPayment" method="post" class="needs-validation">
+                        <input type="hidden" id="callingPage" name="callingPage" value="HotelBooking" />
+                        <div class="row">
+                            <div class="hotel-name card-title">
+                                <h4> Booking Details</h4>
+                            </div>
+                        </div>
+                        <!-- Booking details -->
+                        <div class="row ml-3">
+                            <div class="col-lg-2 mr-3">
+                                <img src=@imgSrc alt="hotel image" class="rounded hotel-image">
+                            </div>
+
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    @Model.HotelName
+                                </div>
+                                <!-- hotel rating-->
+                                <div class="row">
+                                    @for (var i = 1; i <= Int32.Parse(Model.hotelRating); ++i)
+                                    {
+                                        <span class="fas fa-star" title="User Rating"></span>
+                                    }
+                                    @for (var i = 1; i <= (5 - Int32.Parse(Model.hotelRating)); ++i)
+                                    {
+                                        <span class="far fa-star" title="User Rating"></span>
+                                    }
+
+                                </div>
+                                <div class="row">
+                                    Check-in:<span id="check-in-time">@Model.checkIn</span> / Check-Out: <span id="check-out-time">@Model.checkOut.ToString("dd/mm/yyyy")</span>
+                                </div>
+                                <div class="row">
+                                    <small><span id="number-of-rooms">@Model.rooms&nbsp;Room</span>,<span id="adultCount-description">@Model.adults&nbsp;Adult</span><span id="childCount-description">,@Model.child&nbsp;Child</span></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="hotel-name card-title">
+                                <h4>Guest & Payment Details</h4>
+                            </div>
+                        </div>
+                        <!-- User information and price -->
+                        <div class="row ml-3 mb-1">
+                            <div class="col-lg-4">
+                                <div class="input-group mb-3">
+                                    <input id="firstname" name="bookingFirstname" type="text" class="form-control" placeholder="Name*" required="required" value="@Model.userName">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CheckIn and CheckOut dates-->
+                        <div class="row ml-3 mb-4">
+                            <div class="col-lg-3">
+                                <label for="checkin-date">Check-In:</label>
+                                <input type="text" id="checkin-date" name="checkInDate" placeholder="yyyy-mm-dd" class="form-control" value=@Model.checkIn onchange="priceTableUpdateFromDate(@Model.HotelPrice)" required>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="checkout-date">Check-Out:</label>
+                                <input type="text" id="checkout-date" name="checkOutDate" placeholder="yyyy-mm-dd" class="form-control" value=@Model.checkOut onchange="priceTableUpdateFromDate(@Model.HotelPrice)" required>
+                            </div>
+                        </div>
+                        <!-- Rooms -->
+                        <div class="row col-lg-10 ml-3 mb-4 card-text">
+                            <div class="col-lg-2 room-count">
+                                <label for="rooms" class="test"><b>Rooms</b></label>
+                                <select id="rooms" name="rooms" class="form-control booking-rooms" onchange="roomChange(this.value, @Model.HotelPrice)">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 plus-minus-field">
+                                <div class="row">
+                                    <span>Adults</span>
+                                </div>
+                                <div class="row">
+                                    <span class="minus" onclick="adultCountMinus()">-</span>
+                                    <input type="number" class="count" id="adults" name="adults" value=@Model.adults>
+                                    <input type="hidden" id="adultsHidden" name="adultsHidden" value="@Model.adults" />
+                                    <span class="plus" onclick="adultCountPlus()">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 plus-minus-field">
+                                <div class="row">
+                                    <span>Child</span>
+                                </div>
+                                <div class="row">
+                                    <span class="minus" onclick="childCountMinus()">-</span>
+                                    <input type="number" class="count" id="child" name="child" value=@Model.child>
+                                    <input type="hidden" id="childHidden" name="childHidden" value="@Model.child" />
+                                    <span class="plus" onclick="childCountPlus()">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group mb-3">
+                                    <input id="couponcode" type="text" class="form-control" placeholder="Enter Coupon Code">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Base price information -->
+                        <div class="row ml-3 mb-3">
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row card-text price-table">
+                                            <table>
+                                                <tr>
+                                                    <th>Base Price</th>
+                                                    <td>
+                                                        $&nbsp;<span id="basePrice">@Model.HotelPrice</span>
+                                                        <input type="hidden" id="basePriceHidden" name="basePriceHidden" value="@Model.HotelPrice" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Taxe & Service fees (15%)</th>
+                                                    <td>$&nbsp;<span id="taxes"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Discount</th>
+                                                    <td>-$&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Price</th>
+                                                    <td>
+                                                        $&nbsp;<span id="totalPrice"></span>
+                                                        <input type="hidden" id="totalPriceHidden" name="totalPriceHidden" value="0" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mobile and mail-->
+                        <div class="row ml-3 mb-1">
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <input class="form-control col-md-8" name="bookingMobile" placeholder="Phone number*" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="@Model.mobile" required>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group mb-3">
+                                    <input class="form-control" id="email" name="bookingMail" placeholder="E-mail*" type="email" value="@Model.mail" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- submit buttons -->
+                        <div class="row mt-3" style="text-align:center;justify-content:center;">
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary" style="width:200px;">Proceed to Payment</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mt-2" style="text-align:center; justify-content:center;">
+                        <button type="submit" class="btn btn-danger" style="width:200px;" formaction="/Home/HotelBookingView/">Cancel</button>
+                    </div>
+                    <!-- Note -->
+                    <div class="ml-3 mt-3">
+                        <p><i>Note: Booking confirmation message and alerts are sent to above mobile number and e-mail address.</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/scripts/jss/hotelbooking.js"></script>
+        <script>
+            $(function() {
+                $('#checkin-date,#checkout-date').datepicker({
+                    startDate: new Date(),
+                    format:'yyyy-mm-dd',
+                    autoclose: true
+                });
+            });
+        </script>
+    </body>
+}

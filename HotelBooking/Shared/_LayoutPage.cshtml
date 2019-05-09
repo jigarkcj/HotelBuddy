@@ -1,0 +1,154 @@
+﻿@* This layout page is used as a master page for Home Page
+    Header and all the Javascript and CSS files will be loaded first from this page
+*@
+@{
+    var UserName = Session["UserName"];
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @* Font awesome used for responsive icons
+        Carousel css is used for Home page header slider
+        Styles css is reponsible for home page animation. It also contains custom css at bottom.
+    *@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" />
+    <link href="~/scripts/CSS/HomePageStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--date picker-->
+    <script>
+
+    $( function() {
+      $( '#checkin-date, #checkout-date').datepicker({
+        format:'dd/mm/yyyy',
+        todayHighlight:'TRUE',
+        autoclose: true,
+      });
+    } );
+
+    </script>
+    <!--Change navbar color on scroll-->
+    <script>
+
+    $(window).scroll(function(){
+      $("nav").toggleClass('scrolled',$(this).scrollTop()>300);
+    });
+
+    </script>
+
+
+    <!-- HEADER -->
+    <!-- nav bar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="~/Home">HotelBuddy</a>
+            <!-- to minimize menu items into meu button for small screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#home-nav" aria-controls="home-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="home-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="~/Home" class="nav-link">Home</a></li>
+                    @if (UserName != null)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">@UserName</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Registration/UserProfileView">Profile Settings</a>
+                                <a class="dropdown-item" href="~/Booking/BookingDetailsList">Booking History</a>
+                                <a class="dropdown-item" href="/Home/WishlistView">WishList</a>
+                                <a class="dropdown-item" href="~/Login/LogOut">Logout</a>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item"><a href="~/Home/LoginView" class="nav-link">Login</a></li>
+                        <li class="nav-item"><a href="~/Registration/GetRegistrationDetails" class="nav-link">Sign Up</a></li>
+                    }
+
+
+                    <li class="nav-item"><a href="~/ContactUs/ContactUs" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END-HEADER -->
+    @* Content will be rendered inside this division tag *@
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer section_gap">
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-lg-4 col-md-6 mb-4" style="padding-left: 40px">
+                    <h3 class="heading-section">HotelBuddy</h3>
+
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" style="padding-left: 40px">
+                    <h3 class="heading-section">Contact Info</h3>
+                    <div class="address">
+                        <p><i class="fa fa-map-marker round-icon"></i><span>21 Fenwick Street</span> Halifax, Canada</p>
+                    </div>
+                    <div class="phone-number">
+                        <p><i class="fa fa-phone round-icon"></i>+1 999 999999</p>
+                    </div>
+                    <div class="support-mail">
+                        <p>
+                            <i class="fa fa-envelope round-icon"></i><a href="mailto:support@company.com">hotelbuddy@hotelbooking.com</a>
+                        </p>
+                    </div>
+                    <div class="social-icons">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="" class="nav-link pl-0" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+                            <li class="nav-item"><a href="" class="nav-link" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li class="nav-item"><a href="" class="nav-link" title="Snapchat"><i class="fab fa-snapchat"></i></a></li>
+                            <li class="nav-item"><a href="" class="nav-link" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" style="padding-left: 40px">
+                    <h3 class="heading-section">About Us</h3>
+                    <p class="mb-5">Hotel Buddy Application</p>
+                    <p class="mb-5">Kindly contact hotelbuddy@hotelbooking.com for any queries.</p>
+                    <p><a href="~/ContactUs/ContactUs" class="btn btn-primary px-4">Learn More</a></p>
+                </div>
+            </div>
+            <div class="row footer-secondary">
+                <div class="bottom-secondary text-center CustomFooterStyle">
+                    <h5 class="text-center CopyrightStyle">
+                        Copyright ©
+                        <script>document.write(new Date().getFullYear())</script> HotelBuddy | All Rights are reserved
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+
+</html>
+<style type="text/css">
+    .CopyrightStyle, .CustomFooterStyle {
+        margin-bottom: 0px !important;
+    }
+</style>

@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "HotelBooking";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+<!--  body-->
+<div class="container mb-4" style="padding-top: 80px;">
+    <div class="card">
+        <form action="HotelPayment" class="needs-validation" novalidate>
+            <div class="card-body">
+                <div class="row">
+                    <div class="hotel-name card-title">
+                        <h4> Booking Details</h4>
+                    </div>
+                </div>
+                <!-- Booking details -->
+                <div class="row ml-3">
+                    <div class="col-lg-2 mr-3">
+                        <img src="~/images/HomePageImages/trending_hotel_image_1.jpg" alt="hotel image" class="rounded hotel-image" >
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            Ritz-Carlton Montréal
+                        </div>
+                        <div class="row">
+                            <span class="fas fa-star" title="User Rating"></span>
+                            <span class="fas fa-star" title="User Rating"></span>
+                            <span class="fas fa-star" title="User Rating"></span>
+                            <span class="fas fa-star" title="User Rating"></span>
+                            <span class="far fa-star" title="User Rating"></span>
+                        </div>
+                        <div class="row">
+                            Check-in: 9th Feb, Saturday 2019, 3 PM / Check-Out: 11th Feb, Monday 2019, 12 PM
+                        </div>
+                        <div class="row">
+                            <small>1 Adult, 1 Child, 1 Room, 1 night</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="hotel-name card-title">
+                        <h4>Guest & Payment Details</h4>
+                    </div>
+                </div>
+                <!-- User information and price -->
+                <div class="row ml-3 mb-1">
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3">
+                            <input id="firstname" type="text" class="form-control" placeholder="Name*" required>
+                            <div class="invalid-tooltip">
+                                Please Enter your name.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-4 card-text">
+                    <div class="col-lg-2" style="text-align:center;justify-content:center;">
+                        <div class="row" >
+                            <span>Adults</span>
+                        </div>
+                        <div class="row">
+                            <span class="minus">-</span>
+                            <input type="number" class="count" name="qty" value="1">
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="quant[2]">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                            <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3">
+                            <input id="couponcode" type="text" class="form-control" placeholder="Enter Coupon Code">
+                        </div>
+                    </div>
+                </div>
+                <!-- Base price information -->
+                <div class="row ml-3 mb-3">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row card-text price-table">
+                                        <table>
+                                            <tr>
+                                                <th>Base Price</th>
+                                                <td>$&nbsp;250</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Taxe & Service fees (15%)</th>
+                                                <td>$&nbsp;37.5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Discount</th>
+                                                <td>-$&nbsp;0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total Price</th>
+                                                <td>$&nbsp;287.5</td>
+                                            </tr>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-3 mb-1">
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3">
+                            <input class="form-control col-md-2" id="code" placeholder="Code*" type="text" required>
+                            <div class="invalid-tooltip">
+                                Please Enter Country Code.
+                            </div>
+                            <input class="form-control col-md-8" placeholder="Phone number*" type="tel" required>
+                            <div class="invalid-tooltip">
+                                Please Enter your mobile number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3">
+                            <input class="form-control" id="email" placeholder="E-mail*" type="email" required="">
+                        </div>
+                        <div class="invalid-tooltip">
+                            Please Enter your e-mail.
+                        </div>
+                    </div>
+                </div>
+                <!-- submit buttons -->
+                <div class="row mt-3" style="text-align:center;">
+                    <div class="col-lg-4">
+                        <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="button" class="btn btn-danger" value="Cancel">
+                    </div>
+                </div>
+                <div class="row ml-3 mt-3">
+                    <p><i>Note: You will get booking confirmation message and alerts to above mobile number and e-mail address.</i></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

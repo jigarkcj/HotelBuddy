@@ -1,0 +1,49 @@
+﻿@model HotelBooking.Models.HotelDetails
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            @{
+               
+                string imreBase64Data = Convert.ToBase64String(@Model.HotelImage);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+            }
+            <a href="#"><img class="card-img-top" src=@imgSrc alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">@Model.HotelName</a>
+                </h4>
+                <h5>$@Model.HotelPrice</h5>
+                <p class="card-text">@Model.HotelDescription</p>
+            </div>
+            <div class="card-footer">
+                @{string star = "<span class=\"glyphicon glyphicon-envelope\"></span>"; }
+                @switch (@Model.HotelRating)
+                {
+                    case "1":
+                        star = star;
+                        break;
+
+                    case "2":
+                        star = star + star;
+                        break;
+
+                    case "3":
+                        star = star + star + star;
+                        break;
+
+                    case "4":
+                        star = star + star + star;
+                        break;
+
+                    case "5":
+                        star = star + star + star + star + star;
+                        break;
+
+                }
+
+                <small class="text-muted"><span class="glyphicon glyphicon-star"></span></small>
+            </div>
+
+        </div>
+    </div>
+
+

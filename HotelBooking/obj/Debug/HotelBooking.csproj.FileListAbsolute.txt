@@ -1,0 +1,546 @@
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\ApplicationInsights.config
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\csc.exe
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\vbc.exe
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\VBCSCompiler.exe
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\HotelBooking.dll.config
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\HotelBooking.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\HotelBooking.pdb
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.Web.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Helpers.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Mvc.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Razor.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.Razor.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.Web.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Razor.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Webpages.Razor.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Helpers.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\bin\System.Web.Mvc.xml
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\obj\Debug\HotelBooking.dll
+c:\users\jigar\documents\visual studio 2015\Projects\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\ApplicationInsights.config
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\csc.exe
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\vbc.exe
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\VBCSCompiler.exe
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\HotelBooking.dll.config
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\HotelBooking.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\HotelBooking.pdb
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.Web.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Helpers.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Mvc.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Razor.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.Razor.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.Web.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Razor.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Webpages.Razor.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Helpers.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\bin\System.Web.Mvc.xml
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\obj\Debug\HotelBooking.dll
+C:\Dalhousie University\Winter 2019\Web Services\Latest\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\HotelBud\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\HotelBud\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\HotelBud\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\HotelBud\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\HotelBud\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\HotelBud\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\HotelBud\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\HotelBud\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\obj\Debug\HotelBooking.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\obj\Debug\HotelBooking.pdb
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\ApplicationInsights.config
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\csc.exe
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\vbc.exe
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\VBCSCompiler.exe
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\HotelBooking.dll.config
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\HotelBooking.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\HotelBooking.pdb
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.Web.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Helpers.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Mvc.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Razor.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.Razor.dll
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.Web.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Razor.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Webpages.Razor.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Helpers.xml
+C:\Dalhousie University\Winter 2019\Web Services\Branch_Jigar\hotelbuddy-SearchHotels\HotelBooking\bin\System.Web.Mvc.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project_Merge\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\Master\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\Master\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\Master\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\Master\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\Master\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\Master\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\Master\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\Studies\2019\Winter\Advanced Topics in Web Development\Project\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojAssemblyReference.cache
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csproj.CoreCompileInputs.cache
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csproj.CopyComplete
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinal\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojAssemblyReference.cache
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csproj.CoreCompileInputs.cache
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csproj.CopyComplete
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\MACS\Advanced Topics in Web Development\HotelBuddyFinalLatest_Apr07447pm\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\Final_Master\hotelbuddy\HotelBooking\bin\ApplicationInsights.config
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\csc.exe
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\System.Collections.Immutable.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\vbc.exe
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe
+D:\Final_Master\hotelbuddy\HotelBooking\bin\roslyn\VBCSCompiler.exe.config
+D:\Final_Master\hotelbuddy\HotelBooking\bin\HotelBooking.dll.config
+D:\Final_Master\hotelbuddy\HotelBooking\bin\HotelBooking.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\HotelBooking.pdb
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.Web.Infrastructure.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Stripe.net.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Collections.Immutable.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Helpers.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Mvc.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Razor.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.dll
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.Web.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.AI.WindowsServer.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.ApplicationInsights.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.pdb
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Newtonsoft.Json.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\Stripe.net.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Razor.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Deployment.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Webpages.Razor.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Helpers.xml
+D:\Final_Master\hotelbuddy\HotelBooking\bin\System.Web.Mvc.xml
+D:\Final_Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.csprojResolveAssemblyReference.cache
+D:\Final_Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.dll
+D:\Final_Master\hotelbuddy\HotelBooking\obj\Debug\HotelBooking.pdb

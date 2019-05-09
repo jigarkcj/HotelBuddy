@@ -1,0 +1,28 @@
+﻿@using HotelBooking.Models;
+@model PaymentChargeDetails
+@{
+    ViewBag.Title = "PaymentSuccess";
+    Layout = "~/Shared/NoHeaderFooter.cshtml";
+}
+
+<body>
+    <div class="container mb-4" style="padding-top: 80px;">
+        <div class="card">
+            <div class="card-body">
+                <!-- Success message -->
+                <div class="success-div">
+                    <div class="success-message">
+                        <h4><i class="fas fa-check-circle"></i> Payment <span id="status">Successful</span></h4>
+                    </div>
+                    <!-- getting the chargeId from model -->
+                    <p> Please note down the Reference no:<b> @Model.chargeId </b>for future reference.</p>
+                    <p> <span class="red">Please do not referesh the page</span>,if the page does not redirect in 5s <a href="/Booking/BookedDetails"> click here </a></p>
+                    <div class="card grey-border">
+                        <p>Have a problem regarding this payment?<a href="#"> Report this issue </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/scripts/jss/redirect.js"></script>
+</body>

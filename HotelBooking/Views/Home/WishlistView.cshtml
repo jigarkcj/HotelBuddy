@@ -1,0 +1,425 @@
+﻿@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+@model List<HotelBooking.Models.HotelDetails>
+<div class="container">
+    <div class="wishlistTitle text-center" style="margin-top: 15%; position: inherit;">
+        <div>Your wishlist is here</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <div class="row" id="RenderHotelHTML">
+                @if (Model.Count == 0)
+                {
+                    <div>Start wishlisting so you do not miss out any exciting place.</div>
+                }
+                else if (Model.Count > 0)
+                {
+                        <!-- Toast message from Codepen-->
+                    <div id="toast"><div id="img"><i class="fas fa-check"></i></div><div id="desc">It has been wishlisted!!</div></div>
+                        <!-- End of Toast message-->
+                    foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                @{
+
+                                    string imreBase64Data = Convert.ToBase64String(@item.HotelImage);
+                                    var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+                                }
+
+                                <a href='@Url.Action("HotelDescription", "HotelDescription", new { HotelID=@item.HotelID})'><img class="card-img-top" src=@imgSrc alt=""></a>
+
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href='@Url.Action("HotelDescription", "HotelDescription", new { HotelID=@item.HotelID})'>
+
+                                            @item.HotelName
+                                        </a>
+                                        <div class="delete-section" style="float: right;">
+                                            <a class="delete-link" href="@Url.Action("Delete", new { HotelID=@item.HotelID})"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            <div class="btn btn-primary delete-confirm" style="display:none" data-delete-id="@item.HotelID">Confirm Delete?</div>
+                                        </div>
+                                    </h4>
+                                    <h5>
+                                        Starting from CAD @item.HotelPrice
+                                    </h5>
+                                    <p class="card-text">
+                                        @item.HotelDescription
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    @{string star = "<span class=\"glyphicon glyphicon-envelope\"></span>"; }
+                                    @switch (@item.HotelRating)
+                    {
+                        case "1":
+                            star = "★ ☆ ☆ ☆ ☆";
+                            break;
+
+                        case "2":
+                            star = "★ ★ ☆ ☆ ☆";
+                            break;
+
+                        case "3":
+                            star = "★ ★ ★ ☆ ☆";
+                            break;
+
+                        case "4":
+                            star = "★ ★ ★ ★ ☆";
+                            break;
+
+                    }
+
+                                    <small class="text-muted">@star</small>
+                                    <button type="submit" class="btn btn-primary BookNow" style="float:right">Book Now!</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                                            }
+                                        }
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        $(".BookNow").click(function () {
+            alert("Booking hotel is disabled at this moment. Please contact Administrator.");
+            return false;
+        });
+        function launch_toast() {
+            var x = document.getElementById("toast")
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 2500);
+        }
+
+        $(".heartIcon").click(function () {
+            if (this.getAttribute("class") == "fa fa-heart fa-2x bottom-right heartIconActive") {
+                event.target.setAttribute("class", "fa fa-heart fa-2x bottom-right heartIconInActive");
+                unWishListHotel(this, event);
+            }
+            else if (this.getAttribute("class") == "fa fa-heart fa-2x bottom-right heartIcon heartIconActive") {
+                event.target.setAttribute("class", "fa fa-heart fa-2x bottom-right heartIconInActive");
+                unWishListHotel(this, event);
+            }
+            else {
+                wishListHotel(this, event);
+                launch_toast();
+            }
+
+        })
+
+        function wishListHotel(element, event) {
+
+            var hotelIDWishlist = event.target.getAttribute("title");
+            var passParam = { UserID: 1, hotelIDs: hotelIDWishlist };
+            var wishlistObj = JSON.stringify(passParam);
+            $.ajax({
+                url: "/SearchHotels/WishlistHotel",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: wishlistObj,
+                success: function (data) {
+                    event.target.setAttribute("class", "fa fa-heart fa-2x bottom-right heartIconActive");
+                    //element.css("color", "#ff1a1a");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Please try again");
+                }
+            })
+        }
+        function unWishListHotel(element, event) {
+
+            var hotelIDWishlist = event.target.getAttribute("title");
+            var passParam = { UserID: 1, hotelIDs: hotelIDWishlist };
+            var wishlistObj = JSON.stringify(passParam);
+            $.ajax({
+                url: "/SearchHotels/UnWishlistHotel",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: wishlistObj,
+                success: function (data) {
+                    event.target.setAttribute("style", "color: #ff1a1a");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Please try again");
+                }
+            })
+        }
+        $(function () {
+            /* taken from https://www.davepaquette.com/archive/2014/02/24/simple-delete-confirmation-in-asp-net-mvc.aspx */
+            $("a.delete-link").click(function () {
+
+                var deleteLink = $(this);
+                deleteLink.hide();
+                var confirmButton = deleteLink.siblings(".delete-confirm");
+                confirmButton.show();
+
+                var cancelDelete = function () {
+                    removeEvents();
+                    showDeleteLink();
+                };
+
+                var deleteItem = function () {
+
+                    removeEvents();
+
+                    confirmButton.hide();
+                    $.post(
+                        '@Url.Action("Delete")',
+                        AddAntiForgeryToken({ id: confirmButton.attr('data-delete-id') }))
+                       .done(function () {
+
+                           var parentRow = deleteLink.parents("div:first");
+                           var cardParent = parentRow.parents("div:first");
+                           var grandParent = cardParent.parents("div:first");
+                           var removeNode = grandParent.parents("div:first");
+                           removeNode.fadeOut('fast', function () {
+                               removeNode.remove();
+
+                           });
+                       }).fail(function (data) {
+                           alert("error");
+                       });
+                    return true;
+                };
+
+                var removeEvents = function () {
+                    confirmButton.off("click", deleteItem);
+                    $(document).on("click", cancelDelete);
+                    $(document).off("keypress", onKeyPress);
+                };
+
+                var showDeleteLink = function () {
+                    confirmButton.hide();
+                    deleteLink.show();
+                };
+
+                var onKeyPress = function (e) {
+                    //Cancel if escape key pressed
+                    if (e.which == 27) {
+                        cancelDelete();
+                    }
+                };
+
+                confirmButton.on("click", deleteItem);
+                $(document).on("click", cancelDelete);
+                $(document).on("keypress", onKeyPress);
+
+                return false;
+            });
+
+            AddAntiForgeryToken = function (data) {
+                data.__RequestVerificationToken = $('input[name=__RequestVerificationToken]').val();
+                return data;
+            };
+        });
+</script>
+<style>
+    /* Snackbar CSS*/
+    #toast {
+        visibility: hidden;
+        max-width: 50px;
+        height: 50px;
+        /*margin-left: -125px;*/
+        margin: auto;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+        #toast #img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            box-sizing: border-box;
+            background-color: lightgreen;
+        }
+
+        #toast #desc {
+            color: #fff;
+            padding: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+        }
+
+    @@-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @@keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @@-webkit-keyframes expand {
+        from {
+            min-width: 50px;
+        }
+
+        to {
+            min-width: 350px;
+        }
+    }
+
+    @@keyframes expand {
+        from {
+            min-width: 50px;
+        }
+
+        to {
+            min-width: 350px;
+        }
+    }
+
+    @@-webkit-keyframes stay {
+        from {
+            min-width: 350px;
+        }
+
+        to {
+            min-width: 350px;
+        }
+    }
+
+    @@keyframes stay {
+        from {
+            min-width: 350px;
+        }
+
+        to {
+            min-width: 350px;
+        }
+    }
+
+    @@-webkit-keyframes shrink {
+        from {
+            min-width: 350px;
+        }
+
+        to {
+            min-width: 50px;
+        }
+    }
+
+    @@keyframes shrink {
+        from {
+            min-width: 350px;
+        }
+
+        to {
+            min-width: 50px;
+        }
+    }
+
+    @@-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 60px;
+            opacity: 0;
+        }
+    }
+
+    @@keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 60px;
+            opacity: 0;
+        }
+    }
+
+    /*End of snackbar css*/
+
+    .heartIconInActive {
+        color: lightgrey !important;
+    }
+
+    .heartIconActive {
+        color: red !important;
+    }
+
+    .heartIconDisplay .top-right {
+        float: right;
+        margin: 10px 10px 0 0;
+        z-index: 2;
+        position: absolute;
+        background: white;
+        border-radius: 1em;
+        padding: 4px;
+        border: 2px solid;
+        top: 0;
+        right: 0;
+    }
+    /* to align wishlist icon on hotel image at bottom right*/
+    .heartIconDisplay .bottom-right {
+        float: right;
+        margin: 10px 10px 0 0;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+    }
+
+        .heartIconDisplay .bottom-right:hover {
+            color: #ff1a1a;
+            transition: 0.7s ease;
+            cursor: pointer;
+        }
+
+    .fa-heart {
+        color: lightgrey;
+    }
+
+    .wishlistTitle {
+        font-size: 30px;
+        font-style: italic;
+    }
+</style>
+
+
+
+
+

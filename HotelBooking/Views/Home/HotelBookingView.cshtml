@@ -1,0 +1,234 @@
+﻿@model HotelBooking.Models.SearchHotelData
+
+@* Layout page used to display master page content to this page *@
+
+@{
+    Layout = "~/Shared/_LayoutPage.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Booking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+
+<body>
+
+
+    <!--Search div-->
+    <div class="container jumbotron banner" style="font-size:20px;font-weight: 600;">
+        @using (Html.BeginForm("HotelSearch", "SearchHotels", FormMethod.Post, new { @class = "needs-validation" }))
+        {
+            <div class="row">
+                <div class="col-lg-12 col-xs-3 banner_content text-center mt-5">
+                    <h6>Away from monotonous life</h6>
+                    <h2>Relax Your Mind</h2>
+                    <div class="quote"><i class="fa fa-quote-left"></i></div>
+                    <h3>Sometimes the most productive thing you can do is relax.</h3>
+                    <h4>--Mark Black</h4>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-5 col-xs-6 col-centered mb-5">
+                    <label for="search" class="text-dark">Search</label>
+                    @Html.TextBoxFor(s => s.CityName, new { @class = "form-control", placeholder = "Enter City name" })
+                    <div class="invalid-tooltip">
+                        Please Enter the city name.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-7">
+                <div class="col-lg-3 col-xs-6 ">
+                    <label for="checkin-date" class="text-dark">Check In</label>
+                    <div class="icon-wrap">
+                        <div class="icon"><span class="fa fa-calendar" aria-hidden="true"></span></div>
+                        @Html.TextBoxFor(s => s.CheckInDate, new { id = "checkin-date", @class = "form-control", placeholder = "dd/mm/yyyy" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6 ">
+                    <label for="checkout-date" class="text-dark">Check Out</label>
+                    <div class="icon-wrap">
+                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                        @Html.TextBoxFor(s => s.CheckOutDate, new { id = "checkout-date", @class = "form-control", placeholder = "dd/mm/yyyy" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6-3 ">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 mb-3 mb-md-0">
+                            <label for="adults" class="text-dark">Adults</label>   
+                            @{
+                                var list = new SelectList(new[]
+                                {
+                                    new {name="1",value="1"},
+                                    new {name="2",value="2"},
+                                    new {name="3",value="3"},
+                                    new {name="4",value="4"},
+                                },
+                               "name", "value", 1);
+                           @Html.DropDownList("NumberOfAdult", list, new { id = "Adults", @class = "form-control" })                             }                        
+                                                                     
+                                   
+                         </div>
+                        <div class="col-lg-6 col-sm-6 mb-3 mb-md-0">
+
+                            <label for="children" class="text-dark">Children</label>
+                             @{
+                                 var childList = new SelectList(new[]
+                                 {
+                                         new {name="0",value="0"},
+                                         new {name="1",value="1"},
+                                         new {name="2",value="2"},
+                                         new {name="3",value="3"},
+                                         new {name="4",value="4"},
+                                    },
+                                 "name", "value", 0);
+                                @Html.DropDownList("NumberOfChildren", childList, new { id = "Children", @class = "form-control" })}  
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6 align-self-end">
+                    <button class="btn btn-primary btn-block text-light" type="submit" id="SearchHotelsButton">Check Availabilty</button>
+                </div>
+            </div>
+
+        }
+    </div>
+    <!-- Trending section -->
+    <div class="container " style="margin-bottom:34px">
+        <h3>Trending hotels</h3>
+        <!--Card deck used to group the cards-->
+        <div class="card-deck">
+            <!--card used with shadow effect for the background -->
+          
+            <!--Trending Hotels -->
+                @Html.Action("_RenderTrendingHotels")
+         
+
+    </div>
+
+
+    <!--Updated by Jigar Joshi
+       Gets data from the home page search bar and passes to the controller
+       -->
+    <!--
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+
+
+        });
+        //pass data to SearchHotelsController once clicked on search hotels button
+        $("#SearchHotelsButton").click(function () {
+            var data = new Object();
+            data.CityName = $("#TxtBox_SearchCity").val();
+            data.CheckInDate = $("#checkin-date").val();
+            data.CheckOutDate = $("#checkout-date").val();
+
+            //action method
+            var MyAppUrlSettings = {
+                url: '@Url.Action("HotelSearchPost", "SearchHotels")'
+            }
+
+            $.ajax({
+                type: "POST",
+                url: MyAppUrlSettings.url, // the method
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    //  alert("hi");
+                    //location.href = "/SearchHotels/HotelSearch";
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                    // location.href = "/SearchHotels/HotelSearch";
+                }
+            });
+
+        });
+
+
+    </script>
+        -->
+    <script type="text/javascript">
+     
+
+        var regExp = /[a-z]/i;
+        $(document).ready(function () {
+
+            //do not allow alphabets in date field
+            $('#checkin-date').on('keydown keyup', function (e) {
+                BlockAlphabets(e);
+            });
+            $('#checkout-date').on('keydown keyup', function (e) {
+                return false;
+                BlockAlphabets(e);
+            });
+
+
+            $("#SearchHotelsButton").click(function () {
+
+                var CityName = $("#CityName").val();
+                var CheckInDate = $("#checkin-date").val();
+                var CheckOutDate = $("#checkout-date").val();
+                var NumberOFAdult = $('#adults :selected').text();
+                var NumberOfChildren = $('#children :selected').text();
+
+                var checkin = new Date(CheckInDate.substring(3, 5) + "/" + CheckInDate.substring(0, 2) + "/" + CheckInDate.substring(6, 10));
+                var checkout = new Date(CheckOutDate.substring(3, 5) + "/" + CheckOutDate.substring(0, 2) + "/" + CheckOutDate.substring(6, 10));
+                var Today = new Date();
+                Today.setHours(0, 0, 0, 0);
+
+                if (CityName == "" || CheckInDate == "" || CheckOutDate == "") {
+
+                    alert("Please enter valid City, Check-in date, and Check-out date.");
+                    return false;
+                }
+                else {
+                    if ((/\/.*\//.test(CheckInDate) || /\/.*\//.test(CheckOutDate)) == false) {
+                        alert("Please enter valid date format (dd/mm/yyyy)");
+                        return false;
+                    }
+
+                    if (checkin < Today || checkout < Today) {
+                        alert("Plase select Today's date or future date.")
+                        return false;
+                    }
+
+                    if (checkin > checkout) {
+                        alert("Please ensure that the Check Out Date is greater than or equal to the Checkin Date.");
+                        return false;
+                    }
+
+                }
+
+
+            });
+        });
+
+        function BlockAlphabets(data) {
+            var value = String.fromCharCode(data.which) || data.key;
+
+            // No letters
+            if (regExp.test(value)) {
+                data.preventDefault();
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

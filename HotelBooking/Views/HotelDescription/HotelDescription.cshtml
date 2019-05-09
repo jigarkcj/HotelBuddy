@@ -1,0 +1,994 @@
+﻿
+@model List<HotelBooking.Models.ReviewDetails>
+@{
+    ViewBag.Title = "HotelDescription";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+@{
+    var UserName = Session["UserName"];
+
+}
+
+
+<body>
+    <!--Search div-->
+    <input type="hidden" id="userReviewSubmit" value="@ViewBag.UserReviewSubmit" />
+    <input type="hidden" id="hotelID" value="@ViewBag.HotelIDFlag" />
+    <input type="hidden" id="userID" value="@ViewBag.UserIDFlag" />
+    <div class="container" style="padding-top: 70px;font-size:20px;font-weight: 600;">
+        <form action="#" class="needs-validation" novalidate style="display:none;">
+            <div class="row">
+                <div class="col-lg-4 col-xs-6 col-centered mb-5">
+                    <label for="search" class="text-dark" style="margin-bottom: 1px;">Search</label>
+                    <input type="text" id="search" placeholder="Enter City name" class="form-control" required>
+                    <div class="invalid-tooltip">
+                        Please Enter the city name.
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-6 ">
+                    <label for="checkin-date" class="text-dark" style="margin-bottom: 1px;">Check In</label>
+                    <div class="icon-wrap">
+                        <div class="icon"><span class="fa fa-calendar" aria-hidden="true"></span></div>
+                        <input type="text" id="checkin-date" placeholder="dd/mm/yyyy" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-6 ">
+                    <label for="checkout-date" class="text-dark" style="margin-bottom: 1px;">Check Out</label>
+                    <div class="icon-wrap">
+                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                        <input type="text" id="checkout-date" placeholder="dd/mm/yyyy" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-1 col-sm-6 mb-3 mb-md-0">
+                    <label for="adults" class="text-dark" style="margin-bottom: 1px;">Adults</label>
+                    <select name="number-of-adults" id="adults" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-1 col-sm-6 mb-3 mb-md-0">
+                    <label for="children" class="text-dark" style="margin-bottom: 1px;">Children</label>
+                    <select name="number-of-children" id="children" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-xs-6 mt-4 mb-2">
+                    <button class="btn btn-primary btn-block text-light" type="submit">Check Availability</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Slideshow of hotel images -->
+    <!-- TOast message from Codepen-->
+    <div id="toast"><div id="img"><i class="fas fa-check"></i></div><div id="desc">Your review has been submitted</div></div>
+    <!-- End of Toast message-->
+    <div class="container mb-4">
+        <div class="card">
+            <div id="hotel-images" class="carousel slide card-img-top" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#hotel-images" data-slide-to="0" class="active"></li>
+                    <li data-target="#hotel-images" data-slide-to="1"></li>
+                    <li data-target="#hotel-images" data-slide-to="2"></li>
+                    <li data-target="#hotel-images" data-slide-to="3"></li>
+                </ol>
+                @{
+
+                    string imreBase64Data = Convert.ToBase64String(@Model[0].HotelImage);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", imreBase64Data);
+                }
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="@imgSrc" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="~/images/HomePageImages/hotel_description_2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="~/images/HomePageImages/hotel_description_3.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="~/images/HomePageImages/hotel_description_4.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#hotel-images" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#hotel-images" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="card-title col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h4> @Model[0].HotelName</h4>
+                                @{
+                                    int star = 1;
+                                    try
+                                    {
+                                        if (@Model.Average(x => x.Rate) > 0)
+                                        {
+
+                                            while (star <= Math.Round(@Model.Average(x => x.Rate)))
+                                            {
+                                                <span class="fas fa-star"></span>
+                                                star++;
+                                            }
+
+                                            while (star <= 5)
+                                            {
+                                                <span class="far fa-star" title="User Rating"></span>
+                                                star++;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span>No reviews yet!</span>
+                                        }
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        <span>No reviews yet!</span>
+                                    }
+
+                                }
+                            </div>
+                            <div class="col-lg-9">
+                                <ul class="hotel-section-tags">
+                                    <li><a href="#facilites">Facilites</a></li>
+                                    <li><a href="#timings">Timings</a></li>
+                                    <li><a href="#contact-hotel">Contact Hotel</a></li>
+                                    <li><a href="#book-now">Book Now</a></li>
+                                    <li><a href="#users-rating">User's Rating</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hotel-description card-text">
+                    <p>
+                        @Model[0].HotelDescription
+                    </p>
+
+                </div>
+
+                <div class="row" id="facilites">
+                    <div class="card-title section-tags">
+                        <h4>Facilites </h4>
+                    </div>
+                </div>
+                <!-- facilites provided by the hotel -->
+                <div class="row card-text facilites">
+                    @{
+                        string[] facilitiesArray = (Model[0].HotelFacilities).Split(',');
+                        if (facilitiesArray.Length > 0)
+                        {
+
+                            foreach (var facility in facilitiesArray)
+                            {
+                                System.Diagnostics.Debug.Write("facilitiesArray.Length " + facility);
+                                if (facility != "" && facility != null && facilitiesArray.Length > 0)
+                                {
+                                    <div class="col-lg-2 col-xs-2">
+                                        <div class="row">
+                                            @switch (facility)
+                                            {
+                                                case "Phone":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-phone"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Phone Facility
+                                                    </div>
+                                                    break;
+                                                case "Wifi":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-wifi" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        <span class="feature-badge">Free</span>Wifi at hotel
+                                                    </div>
+                                                    break;
+                                                case "Bar":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-glass-cheers"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Hotel bar
+                                                    </div>
+                                                    break;
+                                                case "TV":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-tv"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        TV
+                                                    </div>
+                                                    break;
+                                                case "Spa":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-spa"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Spa
+                                                    </div>
+                                                    break;
+                                                case "Pool":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-swimming-pool"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Pool
+                                                    </div>
+                                                    break;
+                                                case "Gym":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-dumbbell"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        GYM
+                                                    </div>
+                                                    break;
+                                                case "Childcare":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-child"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Childcare
+                                                    </div>
+                                                    break;
+                                                case "Restaurant":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-utensils"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        Restaurant
+                                                    </div>
+                                                    break;
+                                                case "AC":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-wind"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        A/C
+                                                    </div>
+                                                    break;
+                                                case "Parking":
+                                                    <div class="col-lg-3">
+                                                        <i class="fas fa-parking"></i>
+                                                    </div>
+                                                    <div class="col-lg-9" title="Feature available">
+                                                        <span class="feature-badge">Free</span>Parking
+                                                    </div>
+                                                    break;
+                                                case "NULL":
+                                                    <div class="col-lg-12" title="Feature available">
+                                                        <span class="feature-badge">No facilities mentioned by Hotel</span>Parking
+                                                    </div>
+                                                    break;
+
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-lg-12" title="Feature available">
+                                        <span>No facilities mentioned by Hotel</span>
+                                    </div>
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-lg-12" title="Feature available">
+                                <span class="feature-badge">No facilities mentioned by Hotel</span>Parking
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="row mt-4" id="timings">
+                    <div class="heading card-title section-tags">
+                        <h4>Timings</h4>
+                    </div>
+                </div>
+                <div class="row card-text">
+                    <p>
+                        <strong> Check-in&nbsp;:</strong> 06:00 AM <br>
+                        <strong> Check-out&nbsp;:</strong> 10:00 PM
+                    </p>
+                </div>
+                <div class="row" id="contact-hotel">
+                    <div class="heading card-title section-tags">
+                        <h4>Contact</h4>
+                    </div>
+                </div>
+                <div class="row card-text">
+                    Telephone: +1(999)999999 | Fax: +1(999)999999
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-4" id="book-now">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="card-title section-tags">
+                        <h4> Price</h4>
+                    </div>
+                </div>
+                <div class="row" style="font-size:20px;">
+                    <div class="col-lg-1 col-sm-6 mb-3 mb-md-0">
+                        <label for="rooms" class="text-dark">Rooms</label>
+                        <select id="rooms" class="form-control" onchange="roomChange(@Model[0].HotelPrice)">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3 card-text">
+                    <div class="col-lg-9">
+                        <p>
+                            Price for 1 Adult, 1 Child, <span id="number-of-rooms">1</span> Room is
+                            <span class="total-price-info">$<span id="price">@Model[0].HotelPrice</span>/night</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <button type="submit" class="btn btn-primary" onclick="Redirect('@UserName')" id="BookNow">Book Now</button>
+
+                            </div>
+                            
+                            <div class="col-lg-2">
+                              
+                                    <button type="submit" class="btn btn-info" onclick="RedirectToFacebook();">Share</button>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- User rating -->
+    <div class="container mb-4" id="users-rating">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="heading card-title section-tags">
+                        <h4>Ratings</h4>
+                    </div>
+                </div>
+                @{
+                    try
+                    {
+                        int starCount = 1;
+                        //System.Diagnostics.Debug.Write("Star Count " + Math.Round(@Model.Average(x => x.Rate)));
+                        if (Model.Average(x => x.Rate) > 0)
+                        {
+                            <span class="heading">Overall User Rating</span>
+                            while (starCount <= Math.Round(@Model.Average(x => x.Rate)))
+                            {
+                                <span class="fas fa-star"></span>
+                                starCount++;
+                            }
+                            <p> <b style="font-size: 18px">Average Rate: @Math.Round(@Model.Average(x => x.Rate)).ToString()</b></p>
+                        }
+                        else
+                        {
+                            <span>Be the first to review!</span>
+
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        <span>Be the first to review!</span>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+    <!-- Top user reviews -->
+    <div class="container mb-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="card-title">
+                        <h4> Top Reviews</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        @{
+
+                            // display the block only if there are reviews for the hotel.
+                            if (Model.Count > 0)
+                            {
+                                // display all the hotel reviews.
+                                foreach (var row in Model)
+                                {
+
+                                    <div class="row card-body">
+                                        <div class="col-lg-2">
+                                            <div style="text-align:center;">
+                                                <i class="fas fa-user-circle fa-2x"></i>
+                                            </div>
+                                            <div style="text-align:center;">
+                                                @for (int i = 1; i <= Convert.ToInt32(@row.Rate); i++)
+                                                {
+                                                    <span class="fas fa-star"></span>
+                                                }
+                                                @for (int i = (5 - Convert.ToInt32(@row.Rate)); i > 0; i--)
+                                                {
+                                                    <span class="far fa-star"></span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <p>@row.ReviewMessage</p>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <span>Have you visited this place? Kindly help us rate.</span>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- user to add review and rating -->
+    <div class="container mb-4  ratingSection" id="ratingSection">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="card-title">
+                        <h4> Add Rating & Review</h4>
+                    </div>
+                </div>
+
+                <!--Start of rating check from Codepen-->
+
+                <span class="rating_stars rating_0">
+                    <span class='s' data-low='0.5' data-high='1'><i class="far fa-star-o"></i><i class="far fa-star-half-o"></i><i class="far fa-star"></i></span>
+
+                    <span class='s' data-low='1.5' data-high='2'><i class="far fa-star-o"></i><i class="far fa-star-half-o"></i><i class="far fa-star"></i></span>
+                    <span class='s' data-low='2.5' data-high='3'><i class="far fa-star-o"></i><i class="far fa-star-half-o"></i><i class="far fa-star"></i></span>
+                    <span class='s' data-low='3.5' data-high='4'><i class="far fa-star-o"></i><i class="far fa-star-half-o"></i><i class="far fa-star"></i></span>
+                    <span class='s' data-low='4.5' data-high='5'><i class="far fa-star-o"></i><i class="far fa-star-half-o"></i><i class="far fa-star"></i></span>
+
+                    <!--<span class='r r0_5' data-rating='1' data-value='0.5'></span>-->
+                    <span class='r r1 starIconDetail' data-rating='1' data-value='1'></span>
+                    <span class='r r1_5 starIconDetail1'></span>
+                    <span class='r r2 starIconDetail' data-rating='2' data-value='2'></span>
+                    <!--<span class='r r2_5' data-rating='25' data-value='2.5'></span>-->
+                    <span class='r r3 starIconDetail' data-rating='3' data-value='3'></span>
+                    <!--<span class='r r3_5' data-rating='35' data-value='3.5'></span>-->
+                    <span class='r r4 starIconDetail' data-rating='4' data-value='4'></span>
+                    <span class='r r4_5 starIconDetail1'></span>
+                    <span class='r r5 starIconDetail1' data-rating='5' data-value='5'></span>
+                </span>
+
+                <div class="values">
+                    <div>
+                        <label>Rating</label><input type="text" id="rating" value="0" />
+                    </div>
+                    <div>
+                        <label>Rating Value</label><input type="text" name="rating" id="rating_val" value="0" />
+
+
+                    </div>
+                </div>
+
+                <!--end of rating check-->
+            </div>
+        </div>
+        <form>
+            <div class="row mt-3">
+                <div class="col-lg-9">
+                    <textarea class="form-control" id="user-review" name="message" placeholder="Please enter your review here..." rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-1">
+                    <button type="submit" class="btn btn-primary" id="submitReview">Submit</button>
+
+                </div>
+                <div class="col-lg-1">
+                    <div class="controls">
+                        <input type="reset" value="Clear" class="btn btn-danger" id="clearID" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function roomChange(base_value){
+
+            var selectedValue=document.getElementById("rooms").value;
+            document.getElementById("number-of-rooms").innerText = selectedValue;
+            document.getElementById("price").innerText = selectedValue*parseInt(base_value);
+
+        }
+
+        function RedirectToFacebook()
+        {
+          
+            window.location.href = "https://www.facebook.com/Hotel-Buddy-392361278161467/?modal=admin_todo_tour"
+            
+           
+        }
+
+        //  $("#BookNow").click(function () {
+        function Redirect(UserName)
+        {
+            if (UserName != null)
+            {
+                window.location.href = "/Booking/HotelBooking"
+            }
+            else
+            {
+                window.location.href = "/Home/LoginView";
+            }
+        }
+            //return false;
+      //  });
+
+        $(".heartIcon").click(function () {
+
+            if (this.getAttribute("class") == "fa fa-heart fa-2x heartIconActive") {
+                event.target.setAttribute("class", "fa fa-heart fa-2x heartIconInActive");
+                unWishListHotel(this, event);
+            }
+            else {
+                wishListHotel(this, event);
+            }
+
+        })
+
+        function wishListHotel(element, event) {
+            var hotelIDWishlist = event.target.getAttribute("title");
+            var passParam = { UserID: 1, hotelIDs: hotelIDWishlist };
+            var wishlistObj = JSON.stringify(passParam);
+            $.ajax({
+                url: "/SearchHotels/WishlistHotel",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: wishlistObj, // here it show the data, like 5 or some other number
+                success: function (data) {
+                    event.target.setAttribute("class", "fa fa-heart fa-2x heartIconActive");
+                    //element.css("color", "#ff1a1a");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Please try again");
+                }
+            })
+        }
+        function unWishListHotel(element, event) {
+
+            var hotelIDWishlist = event.target.getAttribute("title");
+            var passParam = { UserID: 1, hotelIDs: hotelIDWishlist };
+            var wishlistObj = JSON.stringify(passParam);
+            $.ajax({
+                url: "/SearchHotels/UnWishlistHotel",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: wishlistObj, // here it show the data, like 5 or some other number
+                success: function (data) {
+                    event.target.setAttribute("style", "color: #ff1a1a");
+                    //element.css("color", "#ff1a1a");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Please try again");
+                }
+            })
+        }
+
+        $('#clearID').on('click', function (event)
+        {
+            $('.s').removeClass("active-high");
+
+        });
+        $('#submitReview').on('click', function (event) {
+
+            var message = $('#user-review').val();
+            var ratingsVal = $("#rating_val").val();
+            if ($("#rating_val").val() != null && $("#rating_val").val() != "" && $("#rating_val").val() != 0) {
+                if (message != "" || message != null) {
+                    var passReview = { ReviewMessage: message, RatingValue: ratingsVal };
+                    var reviewObj = JSON.stringify(passReview);
+                    $.ajax({
+                        url: "/HotelDescription/Reviews",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: reviewObj, // here it show the data, like 5 or some other number
+                        success: function (data) {
+                            hideReviews();
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert("Please try again");
+                        }
+                    })
+                }
+            } else {
+                alert("Please provide your rating ");
+
+                var elmnt = document.getElementById("ratingSection");
+                elmnt.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                event.preventDefault();
+            }
+        });
+
+        function launch_toast() {
+            var x = document.getElementById("toast")
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 2500);
+        }
+        function hideReviews() {
+            $('.ratingSection').hide();
+            launch_toast();
+        }
+
+        $(document).ready(function ($) {
+
+            var userReviewFlag = document.getElementById("userReviewSubmit").getAttribute("value");
+
+            if ("Y".localeCompare(userReviewFlag) == 0) {
+                $('.ratingSection').hide();
+            }
+            else {
+                $('.ratingSection').show();
+            }
+            $('.rating_stars span.r').hover(function () {
+                // get hovered value
+                var rating = $(this).data('rating');
+                var value = $(this).data('value');
+                $(this).parent().attr('class', '').addClass('rating_stars').addClass('rating_' + rating);
+                highlight_star(value);
+            }, function () {
+                // get hidden field value
+                var rating = $("#rating").val();
+                var value = $("#rating_val").val();
+                $(this).parent().attr('class', '').addClass('rating_stars').addClass('rating_' + rating);
+                highlight_star(value);
+            }).click(function () {
+                // Set hidden field value
+                var value = $(this).data('value');
+                $("#rating_val").val(value);
+
+                var rating = $(this).data('rating');
+                $("#rating").val(rating);
+
+                highlight_star(value);
+            });
+
+            var highlight_star = function (rating) {
+                $('.rating_stars span.s').each(function () {
+                    var low = $(this).data('low');
+                    var high = $(this).data('high');
+                    $(this).removeClass('active-high').removeClass('active-low');
+                    if (rating >= high) $(this).addClass('active-high');
+                    else if (rating == low) $(this).addClass('active-low');
+                });
+            }
+        });
+    </script>
+    <style>
+        .rating_stars {
+            margin-top: 15px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 200;
+            border: blue;
+            color: black !important;
+            position: relative;
+        }
+
+            .rating_stars span .fa, .rating_stars span.active-low .fa-star-o, .rating_stars span.active-high .fa-star-o {
+                display: none;
+            }
+
+            .rating_stars span .fa-star-o {
+                display: inline-block;
+            }
+
+            .rating_stars span.s.active-high .fa-star {
+                display: inline-block;
+                color: #feb645;
+                font-weight: 900 !important;
+            }
+
+            .rating_stars span.s.active-low .fa-star-half-o {
+                display: inline-block;
+                color: #feb645;
+            }
+
+            .rating_stars span.r {
+                position: absolute;
+                top: 0;
+                height: 20px;
+                width: 10px;
+                left: 0;
+            }
+
+                .rating_stars span.r.r0_5 {
+                    left: 0px;
+                }
+
+                .rating_stars span.r.r1 {
+                    left: 10px;
+                    width: 11px;
+                }
+
+                .rating_stars span.r.r1_5 {
+                    left: 21px;
+                    width: 13px;
+                }
+
+                .rating_stars span.r.r2 {
+                    left: 34px;
+                    width: 12px;
+                }
+
+                .rating_stars span.r.r2_5 {
+                    left: 46px;
+                    width: 12px;
+                }
+
+                .rating_stars span.r.r3 {
+                    left: 58px;
+                    width: 11px;
+                }
+
+                .rating_stars span.r.r3_5 {
+                    left: 69px;
+                    width: 12px;
+                }
+
+                .rating_stars span.r.r4 {
+                    left: 81px;
+                    width: 12px;
+                }
+
+                .rating_stars span.r.r4_5 {
+                    left: 93px;
+                    width: 12px;
+                }
+
+                .rating_stars span.r.r5 {
+                    left: 105px;
+                    width: 12px;
+                }
+
+        /* Just to make things look pretty ;) */
+        .values {
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Snackbar CSS*/
+        #toast {
+            visibility: hidden;
+            max-width: 50px;
+            height: 50px;
+            /*margin-left: -125px;*/
+            margin: auto;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            font-size: 17px;
+            white-space: nowrap;
+        }
+
+            #toast #img {
+                width: 50px;
+                height: 50px;
+                float: left;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                box-sizing: border-box;
+                background-color: lightgreen;
+            }
+
+            #toast #desc {
+                color: #fff;
+                padding: 16px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            #toast.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+            }
+
+        @@-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @@keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @@-webkit-keyframes expand {
+            from {
+                min-width: 50px;
+            }
+
+            to {
+                min-width: 350px;
+            }
+        }
+
+        @@keyframes expand {
+            from {
+                min-width: 50px;
+            }
+
+            to {
+                min-width: 350px;
+            }
+        }
+
+        @@-webkit-keyframes stay {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 350px;
+            }
+        }
+
+        @@keyframes stay {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 350px;
+            }
+        }
+
+        @@-webkit-keyframes shrink {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @@keyframes shrink {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @@-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
+
+        @@keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
+
+        /*End of snackbar css*/
+        .wishListIcon {
+            top: 10% !important;
+        }
+
+        .heartIconDisplay .bottom-right {
+            float: right;
+            margin: 10px 10px 0 0;
+            z-index: 2;
+            position: absolute;
+            right: 0;
+        }
+
+            .heartIconDisplay .bottom-right:hover {
+                color: #ff1a1a;
+                transition: 0.7s ease;
+                cursor: pointer;
+            }
+
+        .fa-heart {
+            color: lightgrey;
+        }
+
+        .heartIconInActive {
+            color: lightgrey !important;
+        }
+
+        .heartIconActive {
+            color: red !important;
+        }
+
+        .starIconDetail {
+            margin-top: 6px;
+            width: 14% !important;
+            margin-right: 8%;
+            /* margin-left: -9px; */
+        }
+
+        .starIconDetail1 {
+            margin-top: 6px;
+            width: 14% !important;
+            margin-right: 8%;
+            margin-left: 7px;
+        }
+    </style>
+
+</body>

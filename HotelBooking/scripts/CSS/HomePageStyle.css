@@ -1,0 +1,663 @@
+﻿
+/* background image for home page */
+.banner {
+    background-image: url('../../images/HomePageImages/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+.jumbotron{  
+    border-radius: 0;
+}
+/* transition from color background to transparent*/
+.navbar-dark{
+    transition: 700ms ease;
+    background: transparent;
+}
+.navbar-dark a{
+    font-weight: 700;
+}
+/* transition from transparent to color background*/
+.navbar-dark.scrolled{
+    transition: 700ms ease;
+    background: #04091e;
+}
+.text-center {
+    text-align: center!important;
+    margin-bottom: 60px;
+    color: #414449;
+    font-weight: 400;
+}
+.text-light label{
+    font-size: 16px;
+}
+.quote-card p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 80%;
+}
+.quote-card cite {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 200;
+  opacity: 0.8;
+}
+.icon-wrap {
+    position: relative;
+}
+.sec_h4{
+    color: #1057a8;
+}
+/* trending images to show in card form*/
+.icon {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px;
+    z-index: 2;
+}
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+.sub-page {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+}
+.hotel_img {
+    height: 14vw;
+    display: flex;
+    border-radius: 25px;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+@media only screen and (max-width: 570px) {
+    .hotel_img {
+        height: 65vw;
+        display: flex;
+        border-radius: 25px;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.hotel_img img {
+    height: 100%;
+    width: 100%;
+}
+/* to align share icon on hotel image attop right*/
+.hotel_img .top-right {
+    float:right;
+    margin:10px 10px 0 0;
+    z-index: 2;
+    position: absolute;
+    background: white;
+    border-radius: 1em;
+    padding: 4px;
+    border: 2px solid;
+    top: 0;
+    right: 0;
+}
+/* to align wishlist icon on hotel image at bottom right*/
+.hotel_img .bottom-right {
+    float:right;
+    margin:0 10px 10px 0 ;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.hotel_img .bottom-right:hover {
+    color: #ff1a1a;
+    transition: 0.7s ease;
+}
+/* to align star icons(rating) on hotel image at  top left*/
+.hotel_img .bottom-left{
+    color: white;
+    z-index: 2;
+    position: absolute;
+    margin:0 0 10px 10px;
+    bottom : 0;
+    left: 0;
+}
+.fa-heart{
+    color: white;
+}
+/* gold color to stars used for rating*/
+
+.fa-star, .fa-star-half-alt{
+    color: #FFA500;
+}
+.round-icon{
+    margin: 10px;
+    border: 1px ;
+    border-radius: 25px;
+}
+/* to zoom in images of hotels in trending section of home page*/
+.zoom{
+    transition: transform 700ms ease;
+}
+.zoom:hover {
+    transition: 700ms ease;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
+.hotel_details {
+    position: relative;
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+/* change cursor to pointer when user hover on the hotel details in trending section*/
+.hotel_details:hover{
+    cursor: pointer;
+    -webkit-box-shadow: -10px 25px 50px;
+    box-shadow: -1px -2px 70px -2px;
+}
+.hotel_details > a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: black;
+}
+.trending-book{
+    position: absolute;
+    margin: 5px;
+    bottom: 15px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-box-shadow:-6px 6px 0 rgba(0, 0, 0, 0.363);
+    box-shadow: -6px 6px 0 rgba(0, 0, 0, 0.363);
+}
+.desc{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* css for HotelBooking and BookedDetails (Price table)*/
+.plus-minus-field input{  
+    border: 0;
+    width: 2%;
+}
+.plus-minus-field input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.plus-minus-field input:disabled{
+    background-color:white;
+}
+.plus-minus-field .count {
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+}
+.plus {
+    cursor: pointer;
+    background-color:  #33cc33;/* light green*/
+    color: white;
+    font:30px/1 Arial,sans-serif;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+    }
+.minus {
+    cursor: pointer;
+    background-color:#ff4d4d;/* light red */
+    color: white;
+    font:30px/1 Arial,sans-serif;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+.minus:hover{
+    background-color: #e60000 !important;/* Dark red */
+}
+.plus:hover{
+    background-color: #145214 !important;/* Dark green */
+}
+.plus-minus-field .row:nth-child(1) {
+    font:normal;
+    font-weight:bold;
+    margin-left:10px;
+}
+.booking-rooms {
+    width:50%;
+}
+.price-table table{
+    width:100%;
+}
+.price-table tr {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.price-table th{
+   font-weight:normal;
+   padding: 10px;
+   text-align: left;    
+}
+.price-table tr:nth-child(4) {
+  color: blue;
+  border:none;
+}
+.price-table td {
+   border:none;  
+}
+.hotel-image {
+    width: 100%;
+    height: 5vw;
+}
+@media only screen and (max-width: 970px) {
+    .hotel-image {
+      width:60%;
+      height:100%;
+    }
+    .plus-minus-field, .room-count {
+    margin-left:40px;
+    }
+    .booking-rooms {
+     width:30%;
+     margin-bottom:10px;
+    }
+}
+/* footer css to change background color and format headers*/
+.footer {
+    background: #04091e;
+    padding: 50px 0px;
+}
+.footer .container{
+    color: #fff !important;
+}
+.footer .footer-links > a{
+    color: #fff !important;
+}
+.footer .heading-section{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: .1em;
+    color: #fff !important;
+}
+.footer-secondary{
+    padding: 5px;
+    justify-content: center;
+}
+.footer .support-mail a{
+    color: white;
+}
+.footer .support-mail a:hover{
+    color: blue;
+}
+.social-icons a{
+    color: blue;
+}
+.social-icons a:hover{
+    color: white;
+}
+/* registration.html css*/
+.registration-form{
+    max-width: 50%;
+}
+#registration-login{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.btn-google {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: black;
+}
+.btn-google:hover{
+    background:black;
+    color:white;
+}
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
+.updates-check{
+ background-color: white;
+ color: black;
+ border-radius: 15px;
+ padding: 25px;
+}
+.d-block {
+    width: auto;
+    height: 550px !important;
+    overflow: hidden;
+}
+.feature-badge{
+    background-color: #428500;
+    padding: 1px 4px;
+    border-radius: 4px;
+    margin-right: 4px;
+    color: white;
+    font-size: 11px;
+}
+.card-title{
+    padding: 4px;
+}
+.card-text{
+    padding: 4px;
+}
+.facilites:hover{
+    cursor: default;
+}
+.hotel-section-tags{
+    list-style-type: none;
+    float: right;
+}
+.hotel-section-tags a{
+    display: block;
+    padding: .5rem 1rem;
+    background-color: #668cff;
+    color: white;
+}
+.hotel-section-tags a:hover{
+    background-color: #003d99; /*dark blue*/
+}
+.hotel-section-tags li {
+  float: left;
+}
+.total-price-info{
+    padding: 2px;
+    border: 1px solid red;
+}
+/* user rating bars to show different levels os rating and colors*/
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  color: white;
+}
+
+.bar-5 {
+    width: 85%;
+    height: 18px;
+    background-color: #4CAF50;
+}
+.bar-4 {
+    width: 45%;
+    height: 18px;
+    background-color: #07f280;
+}
+.bar-3 {
+    width: 20%;
+    height: 18px;
+    background-color: #f1f106;
+}
+.bar-2 {
+    width: 11%;
+    height: 18px;
+    background-color: #f09306;
+}
+.bar-1 {
+    width: 5%;
+    height: 18px;
+    background-color: #ef2c06;
+}
+.needs-validation{
+    position: relative;
+}
+/* css styles for HotelPayment html file*/
+.payment-form{
+    text-align: center;
+}
+.accepted-cards{
+    color: #0000ff ;/* blue */
+    font-weight: bold;
+}
+.accepted-cards img{
+    width: 20%;
+    height: 20%;
+}
+.type-of-card .radio-inline{
+    margin-right:  100px;
+}
+.type-of-card .radio-inline input[type="radio"]{
+    margin-right:  10px;
+}
+.secured-border{
+   width: 50%;
+   margin-left: 23%;
+   margin-top: 5px;
+   position: relative;
+   background-color: rgb(128,128,128,0.05); /* grey color */
+}
+.secured-border .input-group{
+ width: 60%;
+ margin-top: 10px;
+ margin-left: 80px;
+}
+.secured-border .secured-payment-message p{
+    font-weight: bold;
+    text-align: left;
+    float: left;
+    margin-top: 2px;
+    margin-left:40px;
+}
+.lock-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secured-border .expiry-date{
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.security-code-div{
+   text-align: left;
+   margin-top: 20px;
+   margin-left: 80px; 
+   margin-bottom: 13px;  
+}
+.security-code-message p{
+    margin-bottom: 0px;
+}
+#cvv{
+    margin-top: 1px;
+    margin-bottom: 30px;
+}
+.security-code-div img{
+    width: 100%;
+    height: auto;
+}
+.payment-button {
+    width: 20%;
+    margin-left: 400px;
+    margin-bottom: 20px;
+}
+.payment-cancel-button {
+    width: 20%;
+    margin-left: 400px;
+}
+@media only screen and (max-width: 970px) {
+    .hotel-image img {
+        width: 50%;
+        height: 50%;
+    }
+    .secured-border {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 5px;
+        position: relative;
+        background-color: rgb(128,128,128,0.05); /* grey color */
+    }
+    .secured-border .input-group {
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    .secured-border .expiry-date {
+        font-weight: bold;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    .security-code-div {
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 13px;
+    }
+    .security-code-message p {
+        margin-bottom: 0px;
+    }
+    #card-cvv {
+        width: 40%;
+        margin-top: 1px;
+        margin-bottom: 30px;
+    }
+    .accepted-cards img {
+        width: 50%;
+        height: 50%;
+    }
+    .payment-button {
+        width: 80%;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    .payment-cancel-button {
+        width: 80%;
+        margin-left: 30px;
+    }
+}
+/* css styles for stripe elements*/
+.green {
+    border: solid green 1px;
+}
+
+.error {
+    border: solid red 1px;
+}
+
+#card-errors {
+    color: red;
+}
+/* css styles for PaymentSuccess and PaymentFailure html files*/
+.success-div, .failure-div {
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.grey-border {
+    width: 60%;
+    margin-left: 180px;
+    background-color: rgb(128,128,128,0.05);
+}
+
+.success-div p a, .grey-border a, .failure-div p a {
+    color: blue;
+}
+
+.failure-message {
+    color: red;
+}
+
+.error-reason {
+    color: red;
+    font-weight: bold;
+}
+.booking-confirmation-message {
+    color: green;
+    text-align: center;
+}
+.booking-details {
+    margin-left: 10px;
+}
+
+/* css styles for CancelBooking files*/
+.booking-cancellation-message{
+    color: red;
+    text-align: center;
+}
+/* css styles for BookingDetailsList files*/
+
+.booking-details-list table{
+    margin-top: 10px;
+}
+.booking-details-list th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.booking-details-list th,td {
+  padding:5px;
+}
+.booking-details-list td:nth-child(5),td:nth-child(6){
+    border: none;
+    padding: 10px;
+}
+.booking-details-list th {
+    background-color: #666666;
+    color: white;
+}
+.booking-details-list row{
+    margin-right:0px;
+}
+.booking-details-list .booked-hotel-image img{
+    margin-top:15px;
+    margin-left:4px;
+    overflow:hidden;
+    object-fit:cover;
+    width: 100%;
+    height: 5vw;
+}
+#booking-status-confirmed{
+    color:green;
+    font-weight:bold;
+}
+#booking-status-cancelled{
+    color:red;
+    font-weight:bold;
+}
+/* css styles for ModifyBooking files*/
+.booked-hotel-image img{
+    margin-left:4px;
+    margin-bottom:15px;
+    overflow:hidden;
+    object-fit:cover;
+    width: 20%;
+    height: 3%;
+}

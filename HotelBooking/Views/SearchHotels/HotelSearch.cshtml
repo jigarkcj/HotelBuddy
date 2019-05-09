@@ -1,0 +1,351 @@
+﻿@model List<HotelBooking.Models.HotelDetails>
+@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+<br />
+<br />
+
+<div class="container">
+
+
+    <div class="row" style="display:none;">
+        <div class="col-lg-2 align-self-end">
+            @if (Model.Count == 0)
+            {
+                <input type="text" class="form-control" id="city_name" placeholder="Halifax" value="Halifax">
+            }
+            else
+            {
+                <input type="text" class="form-control" id="city_name" placeholder=@Model[0].HotelCity value=@Model[0].HotelCity>
+            }
+                      
+        </div>
+        <div class="col-md-3">
+            <label for="check_in" class="text-light">Checkin</label>
+
+            <input type="date" class="form-control" id="check_in">
+        </div>
+        <div class="col-md-3">
+            <label for="check_out" class="text-light">Checkout</label>
+            <input type="date" class="form-control" id="check_out">
+        </div>
+        <div class="col-md-2 align-self-end" style="padding-right: 0px;">
+            <select id="room_type" class="form-control">
+                <option selected>No of Guests</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="col-md-2 align-self-end">
+            <button type="submit" class="btn btn-primary btn-md shadow_effect" style="width:100%" id="btnSearch">Search</button>
+        </div>
+    </div>
+
+    <div class="row">
+
+
+        <div class="col-lg-3">
+
+            <br /><br />
+            <div class="card">
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <a style="float:right" href="#" id="ClearBtn">Clear</a>
+                        <h6 class="title">Filter by </h6>
+                    </header>
+                    <header class="card-header">
+                        <h6 class="title">Property Type </h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+                            <form>
+                                <label class="form-check">
+                                    <input class="form-check-input PType" type="checkbox" value="hotel">
+                                    <span class="form-check-label">
+                                       Hotel
+                                    </span>
+                                </label> <!-- form-check.// -->
+                                <label class="form-check">
+                                    <input class="form-check-input PType" type="checkbox" value="apartment">
+                                    <span class="form-check-label">
+                                     Apartment
+                                    </span>
+                                </label>  <!-- form-check.// -->
+                                <label class="form-check">
+                                    <input class="form-check-input PType" type="checkbox" value="motel">
+                                    <span class="form-check-label">
+                                      Motel
+                                    </span>
+                                </label>  <!-- form-check.// -->
+                            </form>
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article> <!-- card-group-item.// -->
+
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <h6 class="title">Star Ratings </h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+                            <label class="form-check">
+                                <input class="form-check-input rating" type="checkbox" name="Rating" value="2" id="Rating_2star">
+                                <span class="form-check-label">
+                                    2 stars
+                                </span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input rating" type="checkbox" name="Rating" value="3" id="Rating_3star">
+                                <span class="form-check-label">
+                                   3 stars
+                                </span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input rating" type="checkbox" name="Rating" value="4" id="Rating_4star">
+                                <span class="form-check-label">
+                                   4 stars
+                                </span>
+                            </label>
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article> <!-- card-group-item.// -->
+
+                <article class="card-group-item">
+                    <header class="card-header">
+                        <h6 class="title">Hotel price (CAD) </h6>
+                    </header>
+                    <div class="filter-content">
+                        <div class="card-body">
+                            <label class="form-check">
+                                <input class="form-check-input HotelPrice" type="checkbox" name="HotelPrice" value="100">
+                                <span class="form-check-label">
+                                    50-100
+                                </span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input HotelPrice" type="checkbox" name="HotelPrice" value="150" >
+                                <span class="form-check-label">
+                                    100-150
+                                </span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input HotelPrice" type="checkbox" name="HotelPrice" value="200">
+                                <span class="form-check-label">
+                                   150-200
+                                </span>
+                            </label>
+                        </div> <!-- card-body.// -->
+                    </div>
+                </article> <!-- card-group-item.// -->
+            </div> <!-- card.// -->
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <br /><br />
+            <div class="row" id="RenderHotelHTML">
+
+                <!--Render list of hotels from partial view-->
+                    @Html.Partial("_RenderHotels", Model);
+           
+
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //Filter values ratings on click
+        $('input.rating').on('change', function () {
+            $('input.rating').not(this).prop('checked', false);
+            $('input.PType').prop('checked', false);
+            $('input.HotelPrice').prop('checked', false);
+            if ($('.rating').is(":checked")) {
+                var PostData = {
+                    CityName: $("#city_name").val(),
+                    RadioValue: $('.rating:checked').val()
+                }
+                AjaxCallRetrieveHotels(PostData);
+            }
+        });
+
+        //Property type filter
+        $('input.PType').on('change', function () {
+            $('input.PType').not(this).prop('checked', false);
+            $('input.rating').prop('checked', false);
+            $('input.HotelPrice').prop('checked', false);
+            if ($('.PType').is(":checked")) {
+                var PostData = {
+                    CityName: $("#city_name").val(),
+                    PropertyType: $('.PType:checked').val()
+                }
+                AjaxCallRetrieveHotels(PostData);
+            }
+        });
+
+        //Price filter
+        $('input.HotelPrice').on('change', function () {
+            $('input.HotelPrice').not(this).prop('checked', false);
+            $('input.PType').prop('checked', false);
+            $('input.rating').prop('checked', false);
+
+            if ($('.HotelPrice').is(":checked")) {
+                var PostData = {
+                    CityName: $("#city_name").val(),
+                    HotelPrice: $('.HotelPrice:checked').val()
+                  
+                }
+                AjaxCallRetrieveHotels(PostData);
+            }
+        });
+
+    });
+
+
+    //AJAX call
+    function AjaxCallRetrieveHotels(PostData)
+    {
+        $.ajax({
+            type: "GET",
+            url: "/SearchHotels/GetHotelSearch", // the method
+            data: PostData,
+            contentType: "application/json",
+            dataType: "html",
+            success: function (response) {               
+                $("#RenderHotelHTML").html(response);            
+                //console.log(response);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                debugger;
+                //alert(xhr);
+            }
+        });
+   
+    }
+</script>
+
+<!--Validation script-->
+<script type="text/javascript">
+       var regExp = /[a-z]/i;
+       $(document).ready(function () {
+          
+           //do not allow alphabets in date field
+           $('#check_in').on('keydown keyup', function (e) {
+               BlockAlphabets(e);
+           });
+           $('#check_out').on('keydown keyup', function (e) {
+               return false;
+               BlockAlphabets(e);
+           });
+
+
+           $("#btnSearch").click(function () {
+
+               var CityName = $("#city_name").val();
+               var CheckInDate = $("#check_in").val();
+               var CheckOutDate = $("#check_out").val();
+               var checkin = new Date(CheckInDate.substring(5, 7) + "/" + CheckInDate.substring(8, 10) + "/" + CheckInDate.substring(0, 4));
+               var checkout = new Date(CheckOutDate.substring(5, 7) + "/" + CheckOutDate.substring(8, 10) + "/" + CheckOutDate.substring(0, 4));
+               var Today = new Date();
+               Today.setHours(0, 0, 0, 0);
+
+               if (CityName == "" || CheckInDate == "" || CheckOutDate == "")
+               {
+
+                   alert("Please enter valid City, Check-in date, and Check-out date.");
+                   return false;
+               }
+               else
+               {
+                   if((/\-.*\-/.test(CheckInDate) || /\-.*\-/.test(CheckOutDate)) == false)
+                   {
+                       alert("Please enter valid date format (dd/mm/yyyy)");
+                       return false;
+                   }
+
+                   if (checkin < Today || checkout < Today)
+                   {
+                       alert("Plase select Today's date or future date.")
+                       return false;
+                   }
+
+                   if (checkin > checkout)
+                   {
+                       alert("Please ensure that the Check Out Date is greater than or equal to the Checkin Date.");
+                       return false;
+                   }
+
+                   if($('#room_type :selected').text() =="No of Guests")
+                   {
+                       alert("Please select No of Guests");
+                       return false;
+                   }
+
+                   else
+                   {
+                       //pass data to SearchHotelsController once clicked on search hotels button
+                       //remove filters
+                       $('input.PType').prop('checked', false);
+                       $('input.rating').prop('checked', false);
+                       $('input.HotelPrice').prop('checked', false);
+                       var postData = {
+                           CityName: $("#city_name").val(),
+                           CheckInDate: $("#check_in").val(),
+                           CheckOutDate: $("#check_out").val(),
+                           CallType: "JSON"
+                       }
+                       AjaxCallRetrieveHotels(postData)
+                   }
+
+               }
+
+
+           });
+          
+           
+       });
+      
+
+       $("#ClearBtn").click(function () {
+           $('input.PType').prop('checked', false);
+           $('input.rating').prop('checked', false);
+           $('input.HotelPrice').prop('checked', false);
+
+           var PostData = {
+               CityName: $("#city_name").val(),
+           }
+           AjaxCallRetrieveHotels(PostData);
+       });
+       
+
+       function BlockAlphabets(data)
+       {
+           var value = String.fromCharCode(data.which) || data.key;
+
+           // No letters
+           if (regExp.test(value)) {
+               data.preventDefault();
+               return false;
+           }
+       }
+
+</script>
+
+<style type="text/css">
+    /*checkbox design changes*/
+    input[type=checkbox] {
+        -webkit-appearance: radio !important;
+    }
+</style>

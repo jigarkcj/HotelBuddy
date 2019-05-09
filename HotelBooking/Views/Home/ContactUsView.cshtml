@@ -1,0 +1,42 @@
+﻿@* Contact us page is used to send queries related to Hotel booking site
+   As of now, Bootstrap by default validation is used for the forms. 
+    
+    *@
+@{
+    ViewBag.Title = "ContactUsView";
+    Layout = "~/Shared/HeaderFooter.cshtml";
+
+}
+
+<br/> 
+
+@* Bootstrap container used to make the site reponsive. *@
+<div class="container">
+    <h3 class="text-left">Contact us</h3><br />
+    <div class="row">
+        <div class="col-md-8">
+            <form action="/post" method="post">
+                <input class="form-control" name="name" placeholder="Name..." required="required"/><br />
+                <input class="form-control" name="phone" placeholder="Phone..." required="required"/><br />
+                <input class="form-control" name="email" placeholder="E-mail..." required="required"/><br />
+                <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+                <input class="btn btn-primary" type="submit" value="Send" /><br /><br />
+            </form>
+        </div>
+        @* dummy data used for contact us page *@
+        <div class="col-md-4">
+            <b>Customer service:</b> <br />
+            Phone: +1 999 999 999<br />
+            E-mail: <a href="mailto:support@mysite.com">sample@email.com</a><br />
+            <br /><br />
+            <b>Headquarter:</b><br />
+            Company Inc, <br />
+            5599 Fenwick Street<br />
+            NS, Canada<br />
+            Phone: +1 999 999 999<br />
+            <a href="mailto:usa@mysite.com">sample@email.com</a><br />
+
+        </div>
+    </div>
+</div>
+<br/><br/><br/>

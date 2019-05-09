@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserProfileView</title>
+</head>
+<body>
+    <div class="container">
+
+        <br><br><br>
+        <h3>My Profile</h3>
+        <hr>
+        <form action="/Registration/UserProfileView" method="post">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="user_name" style="text-align:center">User Name</label>
+                        <input type="text" name="user_name" class="form-control col-md-9" id="first_name" placeholder="First Name" value="@Session["UserName"]">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="email_id">EmailID</label>
+                        <input type="text" name="email_id" class="form-control col-md-9" id="email_id" placeholder="email@example.com" value="@Session["UserEmail"]">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="phone_number">Phone Number</label>
+                        <input name="phone_number" class="form-control col-md-9" placeholder="Phone number" type="text" value="@Session["UserPhoneNumber"]">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="password">Password</label>
+                        <input class="form-control col-md-9" name="password" placeholder="Create password" type="password" value="@Session["UserPassword"]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary btn-block col-md-9" onclick="update_user_profile()"> Update  </button>
+                    </div>
+                </div>
+            </div> <!-- form-group// -->
+        </form>
+
+    </div>
+
+    <script>
+        function update_user_profile() {
+            alert("Your user details are updated!!!!");
+        }
+    </script>
+
+</body>
+</html>
+
+

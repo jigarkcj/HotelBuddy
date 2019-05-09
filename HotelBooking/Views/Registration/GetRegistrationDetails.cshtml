@@ -1,0 +1,78 @@
+﻿@model HotelBooking.Models.Registration
+
+@{
+    Layout = "~/Shared/HeaderFooter.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetRegistrationDetails</title>
+</head>
+<body>
+    <br /><br /><br />
+    <div> @ViewBag.UserExist</div>
+    <div class="container">
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                @* Link https://stackoverflow.com/questions/49943610/can-i-check-password-confirmation-in-bootstrap-4-with-default-validation-options *@
+                <form action="/Registration/GetRegistrationDetails" method="post"
+                      oninput='confirmPass.setCustomValidity(password.value != confirmPass.value ? "Passwords do not match." : "")'>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="full_name" class="form-control" placeholder="Full name" type="text" required="required">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="email_id" class="form-control" placeholder="Email address" type="email" required="required">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <input name="phone_number" class="form-control " placeholder="Phone number" type="text" pattern="^\d{3}-\d{3}-\d{4}$"> <a href="#" onclick="phone_info()"><i class="fas fa-info-circle"></i></a>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Create password" type="password" required="required" name="password" minlength="8"> <a href="#" onclick="password_info()"><i class="fas fa-info-circle"></i></a>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Repeat password" type="password" required="required" name="confirmPass" minlength="8">
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" > Create Account  </button>
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="~/Home/LoginView">Log In</a> </p>
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div><br /><br /><br />
+    <!--container end.//-->
+
+    <script>
+
+        function phone_info() {
+            window.open('../Registration/PhoneInfo', 'Phone information', 'width=400,height=400,right=50');
+        }
+
+        function password_info() {
+            window.open('../Registration/PasswordInfo', 'Password information', 'width=400,height=400,right=50');
+
+        }
+
+    </script>
+
+</body>
+</html>

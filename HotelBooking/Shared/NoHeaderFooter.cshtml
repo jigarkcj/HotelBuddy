@@ -1,0 +1,31 @@
+﻿@* This layout page is used as a master page for Home Page
+    Header and all the Javascript and CSS files will be loaded first from this page
+*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @* Font awesome used for responsive icons
+        Carousel css is used for Home page header slider
+        Styles css is reponsible for home page animation. It also contains custom css at bottom.
+    *@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href="~/scripts/CSS/HomePageStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  
+    @* Content will be rendered inside this division tag *@
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>
